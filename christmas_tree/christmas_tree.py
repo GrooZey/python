@@ -11,7 +11,7 @@ def chain(n):
 	for i in range(n):
 		rnd = random.random()
 		if (rnd<=0.2):
-			word+="O"
+			word+="0"
 		else:
 			word+="*"
 	return word
@@ -55,7 +55,7 @@ def christmas_tree(n):
 	word=""
 	for i in range(n):
 		word+=chain2(n-i-1,i+1)
-		word+=chain2(i)
+		word+=chain(i)
 		print(word)
 		word=""
 	print(chain2_tronc(n-2,3))
