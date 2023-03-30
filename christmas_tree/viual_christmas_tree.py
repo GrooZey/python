@@ -13,9 +13,17 @@ except:
     sys.exit()
 if(val<3):
     print("ERROR: argument lower than 3. Try with a bigger value.")
+    sys.exit()
 
 square_size = 10
 
 height = (val+2)*square_size
 width = val*square_size
 g = screen.Screen((height,width), 1, grid=False)
+
+for y in range(height):
+    for x in range(width):
+        g.draw_tile((y, x), "red", refresh=False)
+g.refresh()
+
+g.close()
