@@ -15,7 +15,7 @@ if(val<3):
     print("ERROR: argument lower than 3. Try with a bigger value.")
     sys.exit()
 
-square_size = 10
+square_size = 20
 
 height = (val+2)*square_size
 width = val*square_size
@@ -26,4 +26,6 @@ for y in range(height):
         g.draw_tile((y, x), "red", refresh=False)
 g.refresh()
 
+while g.wait_event()[0] != "END":
+    pass
 g.close()
