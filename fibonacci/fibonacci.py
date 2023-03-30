@@ -14,6 +14,7 @@ except:
 
 if(val<1):
     print("ERROR: argument lower than 1. Try with a bigger value.")
+    sys.exit()
 
 # First value of the Fibonacci's sequence is 0 and the second is 1. The element Fn+2 = Fn+1 + Fn
 def fibonacci(count):
