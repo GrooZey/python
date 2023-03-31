@@ -38,9 +38,10 @@ def branch_or_ball():
 draw_square((width-1)/2,0,"yellow") # draw the little star
 for i in range(3):
     draw_square((width-2+i)/2,height-1,"brown") 
-#for y in range(height):
-    #for x in range(width):
-draw_square(0,0,branch_or_ball())
+for y in range(height-2):
+    for x in range(width):
+        if x>=val-1-y and x<=val+y-1:
+            draw_square(x,y+1,branch_or_ball())
 g.refresh()
 
 while g.wait_event()[0] != "END":
