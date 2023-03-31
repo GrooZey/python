@@ -40,7 +40,7 @@ for i in range(3):
     draw_square((width-2+i)/2,height-1,"brown") 
 #for y in range(height):
     #for x in range(width):
-        #g.draw_tile((y, x), "red", refresh=False)
+draw_square(0,0,branch_or_ball())
 g.refresh()
 
 while g.wait_event()[0] != "END":
