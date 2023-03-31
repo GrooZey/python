@@ -27,6 +27,8 @@ def draw_square(x,y,color):
             g.draw_tile((y*square_size+i, x*square_size+j), color, refresh=False)
 
 draw_square((width-1)/2,0,"yellow") # draw the little star
+for i in range(3):
+    draw_square((width-2+i)/2,height-1,"brown") 
 #for y in range(height):
     #for x in range(width):
         #g.draw_tile((y, x), "red", refresh=False)
