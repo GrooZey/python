@@ -26,6 +26,15 @@ def draw_square(x,y,color):
         for j in range(square_size):
             g.draw_tile((y*square_size+i, x*square_size+j), color, refresh=False)
 
+def branch_or_ball():
+    c = "green"
+    rnd = random.random()
+    if (rnd<=0.1):
+        c = "red"
+    elif (rnd>0.1 and rnd<=0.2):
+        c = "blue"
+    return c
+
 draw_square((width-1)/2,0,"yellow") # draw the little star
 for i in range(3):
     draw_square((width-2+i)/2,height-1,"brown") 
