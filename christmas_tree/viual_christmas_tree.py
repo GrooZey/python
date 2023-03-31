@@ -16,14 +16,20 @@ if(val<3):
     sys.exit()
 
 square_size = 20
+height = (val+2)
+width = (val*2-1)
+g = screen.Screen((height*square_size,width*square_size), 1, grid=False)
 
-height = (val+2)*square_size
-width = val*square_size
-g = screen.Screen((height,width), 1, grid=False)
+# function that draw a square
+def draw_square(x,y,color):
+    for i in range(square_size):
+        for j in range(square_size):
+            g.draw_tile((y*square_size+i, x*square_size+j), color, refresh=False)
 
-for y in range(height):
-    for x in range(width):
-        g.draw_tile((y, x), "red", refresh=False)
+draw_square((width-1)/2,0,"yellow") # draw the little star
+#for y in range(height):
+    #for x in range(width):
+        #g.draw_tile((y, x), "red", refresh=False)
 g.refresh()
 
 while g.wait_event()[0] != "END":
